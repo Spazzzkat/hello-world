@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Project2_AmberWong {
+	public static void main(String[] args) {
+
+		String junior = null;
+		String senior = null;
+		String expert = null;
+		double j = 1.2;
+		double s = 1.18; 
+		double e = 1.15;
+		double totalLumber;
+					
+		System.out.println("Welcome to the Wood-Working Estimator!");
+		System.out.println("What is your project's board footage?");
+
+		Scanner myScanner = new Scanner(System.in);
+		int userNumber = myScanner.nextInt();
+		System.out.println(userNumber); 
+		
+		Scanner skillScanner = new Scanner(System.in);
+		String userLevel = "";
+		System.out.println("What is your skill level?");
+		
+		userLevel = skillScanner.next();
+				
+	if (userLevel.equalsIgnoreCase(junior) )
+			{totalLumber = (userNumber) * (j);
+			}
+	else if (userLevel.equalsIgnoreCase(senior))
+			{totalLumber = (userNumber * s);
+			}
+	else {totalLumber = (userNumber * e);
+		
+	}	
+	
+	System.out.println("The total material needed is:" + (Math.round(totalLumber)));
+	}}
